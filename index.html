@@ -1,159 +1,112 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Hubert Mouton</title>
-
-        <!-- Fonts -->
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        
-        <!-- Styles -->
-        <style>
-            body {
-                font-family: 'Fira Mono', monospace;
-            }
-            
-        </style>
-        <!-- {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}} -->
-
-    </head>
-    <body class="h-screen flex text-sm bg-gradient-to-br from-fuchsia-950 to-slate-800">
-
-
-        <div class="flex-initial align-center justify-center h-auto rounded-xl shadow-xl bg-slate-800 w-5/6 max-w-4xl mx-auto md:mr-2 mt-12 overflow-hidden mb-12">
-                <div class="w-full flex flex-row items-center justify-between bg-slate-900 py-4 px-8">
-                    <a class="  font-semibold text-slate-300">
-                        <span class="text-fuchsia-300 font-bold">»</span>
-                        php artisan serve
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hubert Mouton</title>
+    <!-- Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: 'Fira Mono', monospace;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col md:flex-row text-sm bg-gradient-to-br from-fuchsia-950 to-slate-800">
+    <div class="flex-initial align-center justify-center h-auto rounded-xl shadow-xl bg-slate-800 w-full md:w-5/6 max-w-4xl mx-auto md:mr-2 mt-12 overflow-hidden mb-12">
+        <div class="w-full flex flex-row items-center justify-between bg-slate-900 py-4 px-4 md:px-8">
+            <a class="font-semibold text-slate-300">
+                <span class="text-fuchsia-300 font-bold">»</span>
+                php artisan serve
+            </a>
+        </div>
+        <div class="p-6 text-amber-100">
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-3 py-3">
+                <div class="bg-slate-900 p-6 text-slate-200 rounded-xl my-3 overflow-hidden">
+                    <p class="rounded-xl p-3 transition-colors duration-150">public <span class="text-orange-400">function</span> <span class="text-indigo-400">downloadResume</span>(){</p>
+                    <a target="_blank" href="assets/docs/Hubert_Mouton.pdf" download>
+                        <p class="cursor-pointer rounded-xl hover:bg-slate-800 hover:shadow-sm transition-colors duration-150 pl-6 p-2"><span class="text-indigo-400">return</span> <span class="text-indigo-300">response->download</span><br>(public_path(<span class="text-green-400 text-wrap">'HubertResume.pdf'</span>));</p>
                     </a>
-
+                    <p class="rounded-xl transition-colors duration-150 p-2">}</p>
                 </div>
-
-                <div class="p-6 text-amber-100">
-                    <div class="grid grid-cols-1 grid-flow-col sm:grid-cols-1 gap-3 justify-between py-3">
-
-                        <div class="bg-slate-900 p-6 text-slate-200 rounded-xl my-3 text-wrap overflow-hidden">
-
-                            <p class="rounded-xl    p-3 transition-colors duration-150">public <span class="text-orange-400">function</span> <span class="text-indigo-400">downloadResume</span>(){</p>
-
-                            <a  target="_blank" href="assets/docs/Hubert_Mouton.pdf" download><p class="cursor-pointer   rounded-xl hover:bg-slate-800 hover:shadow-sm transition-colors duration-150 pl-6 p-2"><span class="text-indigo-400">return</span> <span class="text-indigo-300">response->download</span><br>(public_path(<span class="text-green-400 text-wrap">'HubertResume.pdf'</span>));</p></a>
-
-                            <p class="  rounded-xl  transition-colors duration-150 p-2">}</p>
-
-
-
-                        </div>
-                        <div class="grid grid-cols-1 grid-flow-col  sm:grid-cols-1 gap-2 justify-between py-3">
-
-                            <div class="md:shrink-0">
-                                <img src="assets/me3.png" class="hidden lg:block rounded-xl h-48 w-full object-cover md:h-full sm:w-9 md:w-48 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl" alt="Hubert Mouton" loading="eager"/>
-                            </div>
-                            <div class="md:shrink-0">
-                                <img src="assets/me2.jpg" class="hidden lg:block rounded-xl h-48 w-full object-cover md:h-full md:w-48 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl" alt="Hubert Mouton" loading="eager"/>
-                            </div>
-
-                        </div>
-
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 py-3">
+                    <div class="shrink-0">
+                        <img src="assets/me3.png" class="hidden lg:block rounded-xl h-48 w-full object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl" alt="Hubert Mouton" loading="eager"/>
                     </div>
-
-
-
-
-                    <div class="bg-slate-900 p-6 rounded-xl">
-                        <div class="  text-gray-300">
-                            <span class="text-blue-400">$myInfo</span> = [
-                            <div class="ml-4">
-                                <span class="text-purple-400">"name"</span> =&gt; <span class="text-green-400">"Hubert Mouton"</span>,
-                                <br>
-                                <span class="text-purple-400">"nationality"</span> =&gt; <span class="text-green-400">"Namibian" 🇳🇦</span>,
-                                <br>
-                                <span class="text-purple-400">"profession"</span> =&gt; <span class="text-green-400">"Full Stack Developer" 💻</span>,
-                                <br>
-                                <span class="text-purple-400">"expertise"</span> =&gt; [
-                                    <span class="text-green-400">"Laravel" ⚙️</span>, <span class="text-green-400">"Julia" 📊</span>
-                                ],
-                                <br>
-                                <span class="text-purple-400">"activities"</span> =&gt; [
-                                    <div class="ml-4">
-                                        <span class="text-green-400">"Working on top secret projects" 🕵️‍♂️🔒</span>,
-                                        <br>
-                                        <span class="text-green-400">"Contributing to open source in my free time" 🌐</span>]
-                                    </div>
-
-                            </div>
-
-
-                            ];
-                            <p class="  py-2 text-indigo-400 leading-relaxed">Feel free to hit me up on<a class="hover:bg-slate-800 p-2 rounded-xl hover:text-slate-50" rel="me" href="https://www.linkedin.com/in/hubert-mouton/">LinkedIn</a></p>
-
-                        </div>
-
-
-
+                    <div class="shrink-0">
+                        <img src="assets/me2.jpg" class="hidden lg:block rounded-xl h-48 w-full object-cover transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl" alt="Hubert Mouton" loading="eager"/>
                     </div>
-                 </div>
-            <div class="w-full flex flex-row items-center justify-between bg-slate-900 py-4 px-8">
-                <a class="  font-semibold text-slate-300">
-                    <span class="text-fuchsia-300 font-bold">»</span>
-                    php artisan inspire
-                </a>
-
-
+                </div>
             </div>
-            <div class="p-8 text-amber-100">
-                <p class="  py-2 text-slate-300 leading-relaxed">"The only way to do great work is to love what you do." - <span class="text-green-400">Steve Jobs</span></p>
+            <div class="bg-slate-900 p-6 rounded-xl">
+                <div class="text-gray-300">
+                    <span class="text-blue-400">$myInfo</span> = [
+                    <div class="ml-4">
+                        <span class="text-purple-400">"name"</span> =&gt; <span class="text-green-400">"Hubert Mouton"</span>,
+                        <br>
+                        <span class="text-purple-400">"nationality"</span> =&gt; <span class="text-green-400">"Namibian" 🇳🇦</span>,
+                        <br>
+                        <span class="text-purple-400">"profession"</span> =&gt; <span class="text-green-400">"Full Stack Developer" 💻</span>,
+                        <br>
+                        <span class="text-purple-400">"expertise"</span> =&gt; [
+                        <span class="text-green-400">"Laravel" ⚙️</span>, <span class="text-green-400">"Julia" 📊</span>
+                        ],
+                        <br>
+                        <span class="text-purple-400">"activities"</span> =&gt; [
+                        <div class="ml-4">
+                            <span class="text-green-400">"Working on top secret projects" 🕵️‍♂️🔒</span>,
+                            <br>
+                            <span class="text-green-400">"Contributing to open source in my free time" 🌐</span>
+                        ]
+                    </div>
+                </div>
+                <p class="py-2 text-indigo-400 leading-relaxed">Feel free to hit me up on <a class="hover:bg-slate-800 p-2 rounded-xl hover:text-slate-50" rel="me" href="https://www.linkedin.com/in/hubert-mouton/">LinkedIn</a></p>
             </div>
         </div>
-        <div class="flex-auto hidden md:block grow-0 bg-slate-800 text-white w-24 rounded-xl mx-auto mt-12 my-auto ml-6 shadow-xl">
-            <div class="w-full flex flex-row rounded-t-xl items-center justify-between bg-slate-900 py-4 px-4">
-                <a class="  font-semibold text-slate-300">
-                    <span class="text-fuchsia-300 font-bold">»</span>
-                    .env
-                </a>
-
-            </div>
-            <div class="grid grid-cols-1 flex items-center justify-evenly py-3 px-6 ">
-
-                <div class="icon-wrapper">
-                    <a href="https://github.com/hpmouton"><img src="assets/github-icon-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125  my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://tailwindcss.com/"><img src="assets/tailwindcss.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://laravel-livewire.com/"><img src="assets/Livewire.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://laravel.com/"><img src="assets/laravel-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125  my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://vapor.laravel.com/"><img src="assets/laravel-vapor.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125  my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://react.dev/"><img src="assets/react-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125  my-6"></a>
-                </div>
-                <div class="icon-wrapper">
-                    <a href="https://julialang.org/"><img src="assets/julialang-icon.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125  my-6"></a>
-                </div>
-                <!-- Add more images as needed -->
-            </div>
-
+        <div class="w-full flex flex-row items-center justify-between bg-slate-900 py-4 px-4 md:px-8">
+            <a class="font-semibold text-slate-300">
+                <span class="text-fuchsia-300 font-bold">»</span>
+                php artisan inspire
+            </a>
         </div>
-
-
-
-
-
-
-
-
-
-
-    </body>
-
+        <div class="p-6 md:p-8 text-amber-100">
+            <p class="py-2 text-slate-300 leading-relaxed">"The only way to do great work is to love what you do." - <span class="text-green-400">Steve Jobs</span></p>
+        </div>
+    </div>
+    <div class="hidden md:flex md:flex-col md:w-24 grow-0 bg-slate-800 text-white rounded-xl mx-auto md:mt-12 md:my-auto ml-6 shadow-xl">
+        <div class="w-full flex flex-row items-center justify-between bg-slate-900 py-4 px-4 rounded-t-xl">
+            <a class="font-semibold text-slate-300">
+                <span class="text-fuchsia-300 font-bold">»</span>
+                .env
+            </a>
+        </div>
+        <div class="grid grid-cols-1 flex items-center justify-evenly py-3 px-6">
+            <div class="icon-wrapper">
+                <a href="https://github.com/hpmouton"><img src="assets/github-icon-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://tailwindcss.com/"><img src="assets/tailwindcss.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://laravel-livewire.com/"><img src="assets/Livewire.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://laravel.com/"><img src="assets/laravel-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://vapor.laravel.com/"><img src="assets/laravel-vapor.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://react.dev/"><img src="assets/react-2.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+            <div class="icon-wrapper">
+                <a href="https://julialang.org/"><img src="assets/julialang-icon.svg" alt="Image 1" class="filter grayscale hover:grayscale-0 transition ease-in-out hover:scale-125 my-6"></a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
